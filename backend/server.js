@@ -2,7 +2,7 @@ import 'dotenv/config'; // Load environment variables
 import express from 'express';
 import mongoose from 'mongoose';
 import workoutRoutes from './routes/workouts.js'; // Ensure to include the .js extension
-
+import cors from 'cors';
 
 // Express app
 const app = express();
@@ -31,6 +31,6 @@ mongoose.connect(process.env.MONGO_URI)
     console.error(err);
   });
 
-const cors = require('cors');
+
 
 app.use(cors());
