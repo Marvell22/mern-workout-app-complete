@@ -29,3 +29,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => {
     console.error(err);
   });
+
+const cors = require('cors');
+
+app.use(cors());
